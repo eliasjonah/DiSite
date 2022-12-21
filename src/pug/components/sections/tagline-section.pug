@@ -1,0 +1,29 @@
+mixin tagline-section()
+
+  section.tagline
+    .container
+      .tagline__inner
+        .tagline__main
+          .tagline__name EXTRAORDINARY NFTs
+          h1.tagline__header Change your Digital Experience
+          h3.tagline__subheader Suspendisse sem neque, auctor a elementum ut, varius vel leo. Donec diam arcu, porta et magna at
+        .tagline__aside
+          .tagline__img.tagline__img--boy
+            +img('content', 'tagline-boy', 'jpg')
+
+            .tagline__person.tagline__person--man
+              .tagline__img.tagline__img--person
+                +img('content', 'tagline-man', 'jpg')
+              .tagline__person-aside
+                .tagline__person-name Lee Stone
+                .tagline__person-post Lee Stone
+
+            .tagline__img.tagline__img--girl
+              +img('content', 'tagline-girl', 'jpg')
+
+              .tagline__person.tagline__person--woman
+                .tagline__img.tagline__img--person
+                  +img('content', 'tagline-woman', 'jpg')
+                .tagline__person-aside
+                  .tagline__person-name Mia Potter
+                  .tagline__person-post Digital creator

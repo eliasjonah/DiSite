@@ -1,0 +1,115 @@
+.tagline {
+  &__inner {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  &__name {
+    @include font-size(14px, 14px);
+    color: $color-green;
+    font-weight: 400;
+  }
+
+  &__header {
+    margin-top: 0;
+    margin-bottom: 24px;
+    max-width: 538px;
+    width: 100%;
+    font-weight: 400;
+    @include font-size(64px, 64px);
+  }
+
+  &__subheader {
+    max-width: 420px;
+    width: 100%;
+    @include font-size(18px, 18px);
+    font-weight: 400;
+  }
+
+  &__aside {
+    position: relative;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__img--boy {
+    position: relative;
+    top: -82px;
+    left: 82px;
+
+    max-width: 324px;
+    max-height: 324px;
+
+    img {
+      border-radius: 30px;
+    }
+  }
+
+  &__img--girl {
+    position: absolute;
+    top: 100px;
+    left: 170px;
+
+    max-width: 324px;
+    max-height: 324px;
+
+    img {
+      border-radius: 30px;
+    }
+  }
+
+  &__img--person {
+    position: initial;
+    max-width: 24px;
+    max-height: 24px;
+
+    img {
+      border-radius: 100px;
+    }
+  }
+
+  &__person {
+    padding: 4px 8px;
+    position: absolute;
+    display: inline-flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    column-gap: 5px;
+    background-color: $color-white;
+    border-radius: 30px;
+  }
+
+  &__person--man {
+    position: absolute;
+    top: 16px;
+    left: -40px;
+  }
+
+  &__person--woman {
+    bottom: 22px;
+    left: -84px;
+  }
+
+  &__person-name {
+    @include font-size(12px, 12px);
+    font-weight: 400;
+  }
+
+  &__person-post {
+    @include font-size(10px, 10px);
+    font-weight: 400;
+  }
+
+
+}
