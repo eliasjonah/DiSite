@@ -1,0 +1,18 @@
+mixin person-section()
+
+  section.person
+    .container
+      h2.person__header Hey there, we are
+      h4.person__subheader Suspendisse sem neque, auctor a elementum ut, varius vel leo. Donec diam arcu, porta et magna at
+      .person__inner
+        .person__buttons
+          button.person__btn.active Jack
+          button.person__btn Suni
+          button.person__btn Colin
+        .person__about
+          .person__img
+            +img('content', 'tagline-girl', 'jpg')
+          .person__content
+            .person__post Digital Artist
+            .person__tagline Pellentesque blandit in quam rhoncus
+            p.person__description Suspendisse ante mauris, volutpat congue sem ac, ultrices tempor lorem. Nullam eget vehicula tellus, ac consectetur urna. Mauris tincidunt, libero id ultrices tincidunt, mi leo pharetra dolor, sed luctus dui ipsum et augue. Integer non quam feugiat, porttitor libero a, tempor neque. Nulla ac orci mauris. Quisque nisi nisl, rutrum ac diam et, semper commodo quam

@@ -1,0 +1,81 @@
+.collection {
+  padding-top: 82px;
+
+  &__header {
+    margin-bottom: 72px;
+    text-align: center;
+    font-weight: 400;
+    @include font-size(64px, 64px);
+  }
+
+  &__inner {
+    text-align: center;
+  }
+
+  &__list {
+    margin-bottom: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__item {
+    text-align: start;
+    display: block;
+    border-radius: 30px;
+    background-color: $color-white;
+    outline: none;
+    color: $color-black;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color $trans-base, opacity $trans-base;
+
+    &:hover {
+      opacity: 0.9;
+      color: $color-green;
+    }
+
+    &:active {
+      opacity: 0.7;
+    }
+  }
+
+  &__img {
+    width: 358px;
+    height: 220px;
+    margin-bottom: 30px;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 30px 30px 0 0;
+    }
+  }
+
+  &__name {
+    margin-left: 50px;
+    margin-bottom: 38px;
+  }
+
+  &__link {
+    display: inline-block;
+    padding: 14px 40px;
+    text-decoration: none;
+    color: $color-white;
+    background-color: $color-black;
+    cursor: pointer;
+    transition: opacity $trans-base;
+
+    &:hover {
+      opacity: 0.8;
+      color: $color-white;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+  }
+}
