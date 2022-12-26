@@ -94,7 +94,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _utils_scroll_width__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils/scroll-width */ \"./js/utils/scroll-width.js\");\n/* harmony import */ var _utils_ios_vh_fix__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utils/ios-vh-fix */ \"./js/utils/ios-vh-fix.js\");\n/* harmony import */ var _modules_carousel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/carousel */ \"./js/modules/carousel.js\");\n\n\n\nwindow.addEventListener('DOMContentLoaded', () => {\n  Object(_utils_scroll_width__WEBPACK_IMPORTED_MODULE_0__[\"setScrollWidth\"])();\n  Object(_utils_ios_vh_fix__WEBPACK_IMPORTED_MODULE_1__[\"iosVhFix\"])();\n});\n\n// в load следует добавить скрипты, не участвующие в работе первого экрана\nwindow.addEventListener('load', () => {\n  Object(_modules_carousel__WEBPACK_IMPORTED_MODULE_2__[\"carousel\"])();\n});\n\n//# sourceURL=webpack:///./js/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _utils_scroll_width__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils/scroll-width */ \"./js/utils/scroll-width.js\");\n/* harmony import */ var _utils_ios_vh_fix__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utils/ios-vh-fix */ \"./js/utils/ios-vh-fix.js\");\n/* harmony import */ var _modules_carousel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/carousel */ \"./js/modules/carousel.js\");\n/* harmony import */ var _modules_dropdown__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/dropdown */ \"./js/modules/dropdown.js\");\n/* harmony import */ var _modules_person__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/person */ \"./js/modules/person.js\");\n\n\n\n\n\nwindow.addEventListener('DOMContentLoaded', () => {\n  Object(_utils_scroll_width__WEBPACK_IMPORTED_MODULE_0__[\"setScrollWidth\"])();\n  Object(_utils_ios_vh_fix__WEBPACK_IMPORTED_MODULE_1__[\"iosVhFix\"])();\n});\n\n// в load следует добавить скрипты, не участвующие в работе первого экрана\nwindow.addEventListener('load', () => {\n  Object(_modules_carousel__WEBPACK_IMPORTED_MODULE_2__[\"carousel\"])();\n  Object(_modules_dropdown__WEBPACK_IMPORTED_MODULE_3__[\"dropdown\"])();\n  Object(_modules_person__WEBPACK_IMPORTED_MODULE_4__[\"person\"])();\n});\n\n//# sourceURL=webpack:///./js/main.js?");
 
 /***/ }),
 
@@ -107,6 +107,30 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _uti
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"carousel\", function() { return carousel; });\nfunction carousel() {\n  // eslint-disable-next-line no-unused-vars\n  const swiper = new Swiper('.carousel__slider', {\n    centeredSlides: true,\n    loop: true,\n    speed: 1500,\n    slidesPerView: 'auto',\n    autoplay: {\n      delay: 0,\n      disableOnInteraction: false,\n      pauseOnMouseEnter: true\n    }\n  });\n}\n\n\n//# sourceURL=webpack:///./js/modules/carousel.js?");
+
+/***/ }),
+
+/***/ "./js/modules/dropdown.js":
+/*!********************************!*\
+  !*** ./js/modules/dropdown.js ***!
+  \********************************/
+/*! exports provided: dropdown */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"dropdown\", function() { return dropdown; });\nfunction dropdown() {\n  const btns = document.querySelectorAll('.faq__btn');\n  btns.forEach(item => {\n    item.addEventListener('click', () => {\n      item.classList.toggle('open');\n    });\n  });\n\n  // JQuery\n\n  $(function () {\n    $('.faq__btn').click(function () {\n      $(this).toggleClass(' active ');\n      $(this).siblings().removeClass(' active ');\n      $('.faq__content').stop().slideUp(300);\n      $('.active ~ .faq__content').stop().slideDown(300);\n      return false;\n    });\n  });\n}\n\n\n//# sourceURL=webpack:///./js/modules/dropdown.js?");
+
+/***/ }),
+
+/***/ "./js/modules/person.js":
+/*!******************************!*\
+  !*** ./js/modules/person.js ***!
+  \******************************/
+/*! exports provided: person */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"person\", function() { return person; });\nfunction person() {\n  const tabsBtns = document.querySelectorAll('.person__btn');\n  const tabsItems = document.querySelectorAll('.person__about');\n  tabsBtns.forEach(item => {\n    item.addEventListener('click', () => {\n      let currentBtn = item;\n      let tabId = currentBtn.getAttribute('data-tab');\n      let currentTab = document.querySelector(tabId);\n      console.log(tabId);\n      tabsBtns.forEach(item => {\n        item.classList.remove('active');\n      });\n      tabsItems.forEach(item => {\n        item.classList.remove('active');\n      });\n      currentBtn.classList.add('active');\n      currentTab.classList.add('active');\n    });\n  });\n}\n\n\n//# sourceURL=webpack:///./js/modules/person.js?");
 
 /***/ }),
 

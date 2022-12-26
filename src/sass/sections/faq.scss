@@ -1,0 +1,71 @@
+.faq {
+  padding-top: 64px;
+  padding-bottom: 120px;
+
+  &__header {
+    margin-bottom: 72px;
+    font-weight: 400;
+    @include font-size(64px, 64px);
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  &__item {
+    max-width: 1072px;
+    width: 100%;
+    cursor: pointer;
+    background-color: $color-gray;
+    transition: background-color $trans-base;
+
+    &:hover {
+      background-color: $color-white;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    padding: 26px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__btn.open {
+    background-color: $color-white;
+  }
+
+  &__btn.open ~ &__content {
+    background-color: $color-white;
+  }
+
+  &__btn.open &__arrow {
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__tagline {
+    font-weight: 400;
+    @include font-size(22px, 24px);
+  }
+
+  &__arrow {
+    svg {
+      fill: $color-transperent;
+      color: $color-green;
+      transition: transform $trans-base;
+    }
+  }
+
+  &__content {
+    margin-bottom: 0;
+    padding: 26px;
+    display: none;
+    cursor: default;
+  }
+}
