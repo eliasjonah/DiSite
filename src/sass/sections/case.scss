@@ -49,6 +49,8 @@
     padding: 14px 40px;
     display: inline-block;
     float: right;
+    font-weight: 700;
+    @include font-size(14px, 16px);
     text-decoration: none;
     color: $color-white;
     background-color: $color-black;
