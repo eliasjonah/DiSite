@@ -112,4 +112,47 @@
     @include font-size(10px, 10px);
     font-weight: 400;
   }
+
+  @media (max-width: 1199px) {
+
+    &__header {
+      max-width: 452px;
+      font-size: 56px;
+    }
+
+    &__aside {
+      transform: scale(0.8);
+    }
+  }
+
+  @media (max-width: 991px) {
+    &__aside {
+      display: none;
+    }
+  }
+
+  @media (max-width: 480px) {
+    &__name {
+      margin-bottom: 8px;
+    }
+
+    &__header {
+      max-width: 412px;
+      font-size: 48px;
+      margin-bottom: 16px;
+    }
+  }
+
+  @media (max-width: 411px) {
+    &__header {
+      max-width: 364px;
+      font-size: 42px;
+    }
+  }
+
+  @media (max-width: 362px) {
+    &__header {
+      font-size: 40px;
+    }
+  }
 }

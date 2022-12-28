@@ -55,6 +55,7 @@
   }
 
   &__arrow {
+
     svg {
       fill: $color-transperent;
       color: $color-green;
@@ -67,5 +68,24 @@
     padding: 26px;
     display: none;
     cursor: default;
+  }
+
+
+  @media (max-width: 991px) {
+    padding-bottom: 64px;
+    &__header {
+      margin-bottom: 16px;
+      text-align: center;
+    }
+
+    &__btn {
+      gap: 32px;
+    }
+  }
+
+  @media (max-width: 546px) {
+    &__tagline {
+      font-size: 20px;
+    }
   }
 }

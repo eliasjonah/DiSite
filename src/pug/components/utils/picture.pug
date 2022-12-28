@@ -1,26 +1,19 @@
-mixin picture(data = {})
-  - const path = data.path || '';
-  - const name = data.name || '';
-  - const format = data.format || 'jpg';
-  - const sources = data.source || [];
-
-  picture.picture&attributes(attributes)
-    each source in sources
-      source(
-        type="image/" + source.format,
-        media="(max-width:" + source.media + "px)",
-        srcset="img/" + path + "/" + source.name + "." +source.format + ", " + "img/" + path + "/" + source.name + "@2x." + source.format + " 2x"
-      )
-
+mixin picture(pictureProps = {})
+  picture(class= pictureProps.pictureBoxClass)&attributes(attributes)
+    if pictureProps.sources
+      each source in pictureProps.sources
+        source(
+          type="image/" + source.format,
+          media="(max-width: " + source.maxWidth + "px)", srcset="img/" + pictureProps.path + "/" + source.image + "." + source.format + ", " + "img/" + pictureProps.path + "/" + source.image + "@2x." + source.format + " 2x"
+        )
     source(
       type='image/webp',
-      srcset="img/" + path + "/" + name + ".webp" + ", " + "img/" + path + "/" + name + "@2x.webp" + " 2x"
+      srcset="img/" + pictureProps.path + "/" + pictureProps.image + ".webp" + ", " + "img/" + pictureProps.path + "/" + pictureProps.image + "@2x.webp" + " 2x"
     )
-
     img(
-      src="img/" + path + "/" + name + "." + format,
-      srcset= "img/" + path + "/" + name + "@2x." + format + " 2x",
-      width= data.width,
-      height= data.height,
-      alt= data.alt
+      src="img/" + pictureProps.path + "/" + pictureProps.image + "." + pictureProps.format,
+      srcset= "img/" + pictureProps.path + "/" + pictureProps.image + "@2x." + pictureProps.format + " 2x",
+      width= pictureProps.width,
+      height= pictureProps.height,
+      alt= pictureProps.altText
     )

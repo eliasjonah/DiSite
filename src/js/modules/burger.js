@@ -12,6 +12,7 @@ function burger () {
 
   navItem.forEach((item) => {
     item.addEventListener('click', () => {
+      icon.classList.toggle('open');
       nav.classList.toggle('open');
     });
   });

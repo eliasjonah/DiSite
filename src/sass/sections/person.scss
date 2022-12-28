@@ -69,8 +69,10 @@
 
   &__img {
     display: block;
-    width: 552px;
-    height: 394px;
+    max-width: 552px;
+    max-height: 394px;
+    width: 100%;
+    height: 100%;
 
     img {
       display: block;
@@ -106,5 +108,50 @@
     margin-bottom: 14px;
     @include font-size(20px, 26px);
     font-weight: 400;
+  }
+
+  @media (max-width: 991px) {
+
+    padding-top: 82px;
+    padding-bottom: 42px;
+
+    &__inner {
+      padding: 0;
+    }
+
+    &__about {
+      flex-direction: column;
+    }
+
+    &__buttons {
+      justify-content: space-between;
+      margin-bottom: 32px;
+    }
+
+    &__img {
+      margin-bottom: 32px;
+    }
+  }
+
+  @media (max-width: 523px) {
+    &__header {
+      font-size: 52px;
+    }
+
+    &__description {
+      font-size: 18px;
+    }
+  }
+
+  @media (max-width: 429px) {
+    &__header {
+      font-size: 48px;
+    }
+  }
+
+  @media (max-width: 398px) {
+    &__header {
+      font-size: 44px;
+    }
   }
 }
