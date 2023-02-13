@@ -19,11 +19,22 @@
   }
 
   &__logo {
-    width: 94px;
-    height: 32px;
+    display: block;
+    padding: 8px 16px;
     text-align: center;
     color: $color-white;
+    text-decoration: none;
     background-color: $color-black;
+    transition: color $trans-base, opacity $trans-base;
+    cursor: pointer;
+
+    &:hover {
+      color: $color-green;
+    }
+
+    &:active {
+      opacity: 0.7;
+    }
   }
 
   &__nav {
@@ -39,14 +50,14 @@
     text-decoration: none;
     color: $color-black;
     cursor: pointer;
-    transition: color $trans-base;
+    transition: color $trans-base, opacity $trans-base;
 
     &:hover {
       color: $color-green;
     }
 
     &:active {
-      color: $color-green;
+      opacity: 0.7;
     }
   }
 
@@ -68,6 +79,15 @@
     text-decoration: none;
     color: $color-black;
     cursor: pointer;
+    transition: color $trans-base, opacity $trans-base;
+
+    &:hover {
+      color: $color-green;
+    }
+
+    &:active {
+      opacity: 0.7;
+    }
   }
 
   &__btn {
@@ -79,10 +99,16 @@
     text-decoration: none;
     cursor: pointer;
     border: 2px solid $color-black;
-    transition: color $trans-base, background-color $trans-base;
+    transition: color $trans-base, background-color $trans-base, border-color $trans-base;
 
     &:hover {
       color: $color-black;
+      background-color: $color-white;
+    }
+
+    &:active {
+      color: $color-green;
+      border-color: $color-green;
       background-color: $color-white;
     }
   }
